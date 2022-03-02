@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1184</width>
+    <height>824</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="signalControlsGroupBox">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>540</y>
+      <width>531</width>
+      <height>231</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(212, 212, 212);</string>
+    </property>
+    <property name="title">
+     <string>   Signal Controls</string>
+    </property>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>19</y>
+       <width>501</width>
+       <height>191</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="signalControlsGridLayout">
+      <item row="3" column="3">
+       <widget class="QCheckBox" name="channel2ShowHideCheckBox">
+        <property name="text">
+         <string>Channel 2</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QLabel" name="showHideLabel">
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Show/Hide</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QCheckBox" name="channel1ShowHideCheckBox">
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="text">
+         <string>Channel 1</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QPushButton" name="signalZoomOutPushButton">
+        <property name="text">
+         <string>Zoom Out</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="3">
+       <widget class="QCheckBox" name="channel3ShowHideCheckBox">
+        <property name="text">
+         <string>Channel 3</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QPushButton" name="signalZoomInPushButton">
+        <property name="text">
+         <string>Zoom In</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QPushButton" name="signalPausePushButton">
+        <property name="text">
+         <string>Pause</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QPushButton" name="signalSpeedupPushButton">
+        <property name="text">
+         <string>Speed Up</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QPushButton" name="signalSpeedDownPushButton">
+        <property name="text">
+         <string>Speed Down</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QPushButton" name="signalPlayPushButton">
+        <property name="text">
+         <string>Play</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="spectrogramControlsGroupBox">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>540</y>
+      <width>521</width>
+      <height>231</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(212, 212, 212);</string>
+    </property>
+    <property name="title">
+     <string>   Spectrogram Controls</string>
+    </property>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>20</y>
+       <width>481</width>
+       <height>191</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="spectrogramControlsGridLayout">
+      <item row="3" column="1">
+       <widget class="QComboBox" name="spectrogramChannelSelectionComboBox">
+        <item>
+         <property name="text">
+          <string>Channel 1</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Channel 2</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Channel 3</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QSlider" name="spectrogramMaximumPixelsIntenstiyHorizontalSlider">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QSlider" name="spectrogramMinimumPixelsIntenstiyHorizontalSlider">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="spectrogramMinimumPixelsIntenstiyLabel">
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string> Minimum Intensity </string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QComboBox" name="spectrogramPaletteSelectionComboBox">
+        <item>
+         <property name="text">
+          <string>Plasma</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Terrain</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Nipy_spectral</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Viridis</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Ocean</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLabel" name="spectrogramMaximumPixelsIntenstiyLabel">
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string> Maximum Intensity </string>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="spectrogramPaletteSelectionLabel">
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Choose Palette </string>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="spectrogramChannelSelectionLabel">
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Choose Channel</string>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QSplitter" name="splitter">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>20</y>
+      <width>1051</width>
+      <height>471</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <property name="opaqueResize">
+     <bool>true</bool>
+    </property>
+    <property name="handleWidth">
+     <number>20</number>
+    </property>
+    <widget class="QGraphicsView" name="channelsGraphicsView">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Ignored" vsizetype="Expanding">
+       <horstretch>1</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 0, 0);</string>
+     </property>
+    </widget>
+    <widget class="QGraphicsView" name="spectrogramGraphicsView"/>
+   </widget>
+   <widget class="QSlider" name="signalScrollVerticalSlider">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>22</y>
+      <width>22</width>
+      <height>471</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QSlider" name="signalScrollHorizontalSlider">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>500</y>
+      <width>771</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1184</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuBarFileDropDown">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <widget class="QMenu" name="openMenu">
+     <property name="title">
+      <string>Open</string>
+     </property>
+     <addaction name="openChannel1Action"/>
+     <addaction name="openChannel2Action"/>
+     <addaction name="openChannel3Action"/>
+    </widget>
+    <addaction name="openMenu"/>
+    <addaction name="saveAsPdfAction"/>
+   </widget>
+   <widget class="QMenu" name="menuBarEditDropDown">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <widget class="QMenu" name="channelAddLabelMenu">
+     <property name="title">
+      <string>Add Label</string>
+     </property>
+     <addaction name="channel1AddLabelAction"/>
+     <addaction name="channel2AddLabelAction"/>
+     <addaction name="channel3AddLabelAction"/>
+    </widget>
+    <widget class="QMenu" name="channelChangeColorMenu">
+     <property name="title">
+      <string>Change Color</string>
+     </property>
+     <addaction name="channel1ChangeColorAction"/>
+     <addaction name="channel2ChangeColorAction"/>
+     <addaction name="channel3ChangeColorAction"/>
+    </widget>
+    <addaction name="channelAddLabelMenu"/>
+    <addaction name="channelChangeColorMenu"/>
+   </widget>
+   <addaction name="menuBarFileDropDown"/>
+   <addaction name="menuBarEditDropDown"/>
+  </widget>
+  <action name="saveAsPdfAction">
+   <property name="text">
+    <string>Save as PDF</string>
+   </property>
+  </action>
+  <action name="channel1AddLabelAction">
+   <property name="text">
+    <string>Channel 1</string>
+   </property>
+  </action>
+  <action name="channel2AddLabelAction">
+   <property name="text">
+    <string>Channel 2</string>
+   </property>
+  </action>
+  <action name="channel3AddLabelAction">
+   <property name="text">
+    <string>Channel 3</string>
+   </property>
+  </action>
+  <action name="openChannel1Action">
+   <property name="text">
+    <string>Channel 1</string>
+   </property>
+  </action>
+  <action name="openChannel2Action">
+   <property name="text">
+    <string>Channel 2</string>
+   </property>
+  </action>
+  <action name="openChannel3Action">
+   <property name="text">
+    <string>Channel 3</string>
+   </property>
+  </action>
+  <action name="channel1ChangeColorAction">
+   <property name="text">
+    <string>Channel 1</string>
+   </property>
+  </action>
+  <action name="channel2ChangeColorAction">
+   <property name="text">
+    <string>Channel 2</string>
+   </property>
+  </action>
+  <action name="channel3ChangeColorAction">
+   <property name="text">
+    <string>Channel 3</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
