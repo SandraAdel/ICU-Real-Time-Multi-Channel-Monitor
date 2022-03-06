@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1184</width>
-    <height>824</height>
+    <width>1212</width>
+    <height>882</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,9 +20,9 @@
    <widget class="QGroupBox" name="signalControlsGroupBox">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>540</y>
-      <width>531</width>
+      <x>40</x>
+      <y>600</y>
+      <width>571</width>
       <height>231</height>
      </rect>
     </property>
@@ -42,8 +42,8 @@
       <rect>
        <x>20</x>
        <y>19</y>
-       <width>501</width>
-       <height>191</height>
+       <width>531</width>
+       <height>201</height>
       </rect>
      </property>
      <layout class="QGridLayout" name="signalControlsGridLayout">
@@ -135,9 +135,9 @@
    <widget class="QGroupBox" name="spectrogramControlsGroupBox">
     <property name="geometry">
      <rect>
-      <x>610</x>
-      <y>540</y>
-      <width>521</width>
+      <x>640</x>
+      <y>600</y>
+      <width>531</width>
       <height>231</height>
      </rect>
     </property>
@@ -157,8 +157,8 @@
       <rect>
        <x>20</x>
        <y>20</y>
-       <width>481</width>
-       <height>191</height>
+       <width>491</width>
+       <height>201</height>
       </rect>
      </property>
      <layout class="QGridLayout" name="spectrogramControlsGridLayout">
@@ -300,10 +300,10 @@
      </layout>
     </widget>
    </widget>
-   <widget class="QSplitter" name="splitter">
+   <widget class="QSplitter" name="channelsGraphAndSpectrogramSplitter">
     <property name="geometry">
      <rect>
-      <x>80</x>
+      <x>120</x>
       <y>20</y>
       <width>1051</width>
       <height>471</height>
@@ -334,7 +334,7 @@
    <widget class="QSlider" name="signalScrollVerticalSlider">
     <property name="geometry">
      <rect>
-      <x>50</x>
+      <x>90</x>
       <y>22</y>
       <width>22</width>
       <height>471</height>
@@ -347,7 +347,7 @@
    <widget class="QSlider" name="signalScrollHorizontalSlider">
     <property name="geometry">
      <rect>
-      <x>80</x>
+      <x>120</x>
       <y>500</y>
       <width>771</width>
       <height>31</height>
@@ -357,13 +357,121 @@
      <enum>Qt::Horizontal</enum>
     </property>
    </widget>
+   <widget class="QPushButton" name="manualViewButton">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>540</y>
+      <width>101</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(212, 212, 212);</string>
+    </property>
+    <property name="text">
+     <string>Manual View</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="automaticViewButton">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>540</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(212, 212, 212);</string>
+    </property>
+    <property name="text">
+     <string>Automatic View</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>30</y>
+      <width>64</width>
+      <height>461</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="channelLabelsVerticalLayout">
+     <item>
+      <widget class="QLabel" name="channel3Label">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Channel 3</string>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="channel2Label">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Channel 2</string>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="channel1Label">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Channel 1</string>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1184</width>
+     <width>1212</width>
      <height>21</height>
     </rect>
    </property>
