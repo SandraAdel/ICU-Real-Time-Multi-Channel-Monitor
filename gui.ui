@@ -166,6 +166,11 @@
        <widget class="QComboBox" name="spectrogramChannelSelectionComboBox">
         <item>
          <property name="text">
+          <string>Choose Channel</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
           <string>Channel 1</string>
          </property>
         </item>
@@ -300,37 +305,6 @@
      </layout>
     </widget>
    </widget>
-   <widget class="QSplitter" name="channelsGraphAndSpectrogramSplitter">
-    <property name="geometry">
-     <rect>
-      <x>120</x>
-      <y>20</y>
-      <width>1051</width>
-      <height>471</height>
-     </rect>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-    <property name="opaqueResize">
-     <bool>true</bool>
-    </property>
-    <property name="handleWidth">
-     <number>20</number>
-    </property>
-    <widget class="PlotWidget" name="channelsGraphicsView">
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Ignored" vsizetype="Expanding">
-       <horstretch>1</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(0, 0, 0);</string>
-     </property>
-    </widget>
-    <widget class="QGraphicsView" name="spectrogramGraphicsView"/>
-   </widget>
    <widget class="QSlider" name="signalScrollVerticalSlider">
     <property name="geometry">
      <rect>
@@ -399,12 +373,12 @@
      <string>Automatic View</string>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>20</x>
       <y>30</y>
-      <width>64</width>
+      <width>75</width>
       <height>461</height>
      </rect>
     </property>
@@ -465,6 +439,48 @@
      </item>
     </layout>
    </widget>
+   <widget class="QSplitter" name="channelsGraphAndSpectrogramSplitter">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>19</y>
+      <width>1061</width>
+      <height>471</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <widget class="QWidget" name="gridLayoutWidget">
+     <layout class="QGridLayout" name="channelsGridLayout">
+      <item row="0" column="0">
+       <widget class="PlotWidget" name="channelsGraphicsView">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Ignored" vsizetype="Expanding">
+          <horstretch>1</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(0, 0, 0);</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="gridLayoutWidget_2">
+     <layout class="QGridLayout" name="spectrogramGridLayout">
+      <item row="0" column="0">
+       <widget class="QWidget" name="spectrogramWidget" native="true">
+        <property name="styleSheet">
+         <string notr="true">
+background-color: rgb(255, 255, 255);</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -472,7 +488,7 @@
      <x>0</x>
      <y>0</y>
      <width>1212</width>
-     <height>21</height>
+     <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuBarFileDropDown">
