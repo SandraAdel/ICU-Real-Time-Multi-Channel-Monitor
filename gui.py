@@ -135,7 +135,9 @@ class Ui_MainWindow(object):
         self.channelsGraphAndSpectrogramSplitter.setOpaqueResize(True)
         self.channelsGraphAndSpectrogramSplitter.setHandleWidth(20)
         self.channelsGraphAndSpectrogramSplitter.setObjectName("channelsGraphAndSpectrogramSplitter")
-        self.channelsGraphicsView = QtWidgets.QGraphicsView(self.channelsGraphAndSpectrogramSplitter)
+        self.channelsGraphicsView = PlotWidget(self.channelsGraphAndSpectrogramSplitter)
+        self.channelsGraphicsView.setBackground((0, 0, 0))
+        self.channelsGraphicsView.showGrid(x=True, y=True, alpha=0.5)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Ignored, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(1)
         sizePolicy.setVerticalStretch(0)
@@ -143,15 +145,6 @@ class Ui_MainWindow(object):
         self.channelsGraphicsView.setSizePolicy(sizePolicy)
         self.channelsGraphicsView.setStyleSheet("background-color: rgb(0, 0, 0);")
         self.channelsGraphicsView.setObjectName("channelsGraphicsView")
-        # Adding PlotWidget and its Methods (TO BE CHANGED) (PROMOTE channelsPlotWidget TO PlotWidget)
-        self.channelsPlotWidget = PlotWidget(self.centralwidget)
-        self.channelsPlotWidget.setGeometry(QtCore.QRect(120, 20, 775, 471))
-        self.channelsPlotWidget.setObjectName("channelsPlotWidget")
-        self.channelsPlotWidget.setBackground((0, 0, 0))
-        self.channelsPlotWidget.setRange(xRange=(0, 5), yRange=(0, 11), padding=0)
-        self.channelsPlotWidget.showGrid(x=True, y=True, alpha=0.5)
-        self.channelsPlotWidget.setLimits(xMin=0, xMax=10, yMin=0, yMax=15, minXRange=0.5, maxXRange=15, minYRange=0.5, maxYRange=15)
-        # # # # # # # # # # # # # # # # # #
         self.spectrogramGraphicsView = QtWidgets.QGraphicsView(self.channelsGraphAndSpectrogramSplitter)
         self.spectrogramGraphicsView.setObjectName("spectrogramGraphicsView")
         self.signalScrollVerticalSlider = QtWidgets.QSlider(self.centralwidget)
@@ -307,3 +300,13 @@ class Ui_MainWindow(object):
         self.channel1ChangeColorAction.setText(_translate("MainWindow", "Channel 1"))
         self.channel2ChangeColorAction.setText(_translate("MainWindow", "Channel 2"))
         self.channel3ChangeColorAction.setText(_translate("MainWindow", "Channel 3"))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec_())

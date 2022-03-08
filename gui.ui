@@ -318,7 +318,7 @@
     <property name="handleWidth">
      <number>20</number>
     </property>
-    <widget class="QGraphicsView" name="channelsGraphicsView">
+    <widget class="PlotWidget" name="channelsGraphicsView">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Ignored" vsizetype="Expanding">
        <horstretch>1</horstretch>
@@ -567,6 +567,13 @@
    </property>
   </action>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PlotWidget</class>
+   <extends>QGraphicsView</extends>
+   <header>pyqtgraph</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>
