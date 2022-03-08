@@ -68,6 +68,7 @@ class MainWindow(QMainWindow):
         self.figure = plt.figure(figsize=(15,5))
         self.Canvas = FigureCanvas(self.figure)
     # Methods
+    '''
     def openFile(self):
         # Getting the address of the csv file location and reading the data file
         # As it turns a tuple of file address and extenstion, we take te first item only (file name)
@@ -80,6 +81,8 @@ class MainWindow(QMainWindow):
         self.isChannel1Open = true
         # PLotting with font size = 1.5 in blue color
         self.ui.channelsGraphicsView.plot(self.channel1TimeReadings, self.channel1AmplitudeReadings, pen=pyqtgraph.mkPen('b', width=1.5))
+    '''
+
     # function to plot spectrogram need time amplitude 
     def plotSpectrogram(self, time, amplitude):
         fs = 1/(time[1] - time [0])
@@ -96,8 +99,6 @@ class MainWindow(QMainWindow):
         self.Canvas.draw()
 
 
-    #! PLOT AND CLEAR SPECTROGRAMMMMMM
-    # Function to clear spectrogram graph
     def clearSpectrogramGraph(self):
         self.figure = plt.figure(figsize=(15,5))
         self.Canvas = FigureCanvas(self.figure)
