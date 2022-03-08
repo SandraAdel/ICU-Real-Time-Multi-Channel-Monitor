@@ -126,7 +126,6 @@ class MainWindow(QMainWindow):
 
     #color palette function 
     def changeColorPaletteSpectrogram(self, colorIndex):
-        print(colorIndex)
         if self.currentSpectrogram == 0:
             return
         if colorIndex == 0:
@@ -157,8 +156,6 @@ class MainWindow(QMainWindow):
         self.minimumSliderValues = self.ui.spectrogramMinimumPixelsIntenstiyHorizontalSlider.value()
         self.maximumSliderValues = self.ui.spectrogramMaximumPixelsIntenstiyHorizontalSlider.value()
 
-        print(self.minimumSliderValues)
-        print(self.maximumSliderValues) 
         
         if self.minimumSliderValues > self.maximumSliderValues:
             self.minimumSliderValues = self.setMinimumSliderValue
