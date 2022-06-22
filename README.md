@@ -1,4 +1,4 @@
-# ICU Real-Time Multi-Channel Signal Viewer
+# ICU Real-Time Multi-Channel Monitor
 ## Desktop Application - Written in Python (Pyqt5)
 ## Features:
 - Browsing medical signals in 3 available channels in cine mode.
